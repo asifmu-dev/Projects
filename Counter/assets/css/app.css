@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1f1f1f;
+    margin: 0;
+}   
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-item {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 20px;
+    color: #ff4040;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+}
