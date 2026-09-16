@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debt Type Form</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <script src="https://kit.fontawesome.com/1f2409d129.js" defer></script>
+  </head>
+  <body>
+    <div class="form-container" id="form-container">
+      <h2>What's your main type of debt?</h2>
+      <div id="error-message" class="error" style="display: none">
+        Please select at least one option to continue.
+      </div>
+      <div class="main-wrapper">
+        <div class="debt-option">
+            <input type="checkbox" class="debt-checkbox" id="debt-option1">
+            <div class="checkbox-content">
+            <i class="fa-regular fa-credit-card icon"></i>
+            <label for="debt-option1">Credit card <br> debt</label>
+            </div>
+        </div>
+        <div class="debt-option">
+            <input type="checkbox" class="debt-checkbox" id="debt-option2">
+            <div class="checkbox-content">
+            <i class="fa-solid fa-heart-pulse icon"></i>
+            <label for="debt-option2">Medical <br> bills</label>
+            </div>
+        </div>
+        <div class="debt-option">
+            <input type="checkbox" class="debt-checkbox" id="debt-option3">
+            <div class="checkbox-content">
+            <i class="fa-solid fa-graduation-cap icon"></i>
+            <label for="debt-option3">Students <br> loans</label>
+            </div>
+        </div>
+        <div class="debt-option w-50">
+            <input type="checkbox" class="debt-checkbox" id="debt-option4">
+            <div class="checkbox-content">
+            <i class="fa-regular fa-file-lines icon"></i>
+            <label for="debt-option4">Text debt</label>
+            </div>
+        </div>
+        <div class="debt-option w-50">
+            <input type="checkbox" class="debt-checkbox" id="debt-option5">
+            <div class="checkbox-content">
+            <i class="fa-solid fa-hand-holding-dollar icon"></i>
+            <label for="debt-option5">Other</label>
+            </div>
+        </div>
+    </div>
+      <button class="continue-btn" id="continue-btn">Continue</button>
+      <div class="reviews">
+        <span class="google">
+          G<span>o</span><span>o</span><span>g</span>le
+        </span>
+        ⭐⭐⭐⭐⭐ 4.8 (2,473 reviews)
+      </div>
+    </div>
+
+    <!-- Step 1/3 Loan main-wrapper (initially hidden) -->
+    <div class="step-container" id="loan-form-container" style="display: none">
+      <div class="close-icon" id="close-loan">&times;</div>
+      <h2>Step 1/3</h2>
+      <div class="profile">
+        <img src="assets/images/profile_1.png" alt="" />
+      </div>
+      <p>Hi there! I’m Stacy.<br />Let’s see some personal loan main-wrapper.</p>
+      <div class="features">
+        <div class="inner-feature">
+          <div class="icon-circle">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <p>
+            No Hidden <br />
+            Fees
+          </p>
+        </div>
+        <div class="inner-feature">
+          <div class="icon-circle">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <p>
+            Boost Your <br />
+            Credit Score
+          </p>
+        </div>
+        <div class="inner-feature">
+          <div class="icon-circle">
+            <i class="fa-solid fa-virus-covid"></i>
+          </div>
+          <p>
+            Fast Debt <br />
+            Pay Off
+          </p>
+        </div>
+      </div>
+      <h3>How much are you looking to borrow?</h3>
+      <div class="selected-btns">
+        <button class="continue-btn" id="loan-amount-1">
+          Less than $10,000
+        </button>
+        <button class="continue-btn" id="loan-amount-2">
+          $10,000 - $20,000
+        </button>
+        <button class="continue-btn" id="loan-amount-3">
+          $20,000 - $50,000
+        </button>
+        <button class="continue-btn" id="loan-amount-4">
+          More than $50,000
+        </button>
+      </div>
+      <div class="reviews">
+        <span class="google">
+          G<span>o</span><span>o</span><span>g</span>le
+        </span>
+        ⭐⭐⭐⭐⭐ 4.8 (2,473 reviews)
+      </div>
+    </div>
+
+    <!-- Step 2 (hidden initially) -->
+    <div class="step-container" id="step-2" style="display: none">
+      <div class="close-icon" id="close-loan">&times;</div>
+      <h2>Step 2/3</h2>
+      <div class="profile">
+        <img src="assets/images/profile_1.png" alt="" />
+      </div>
+      <p>Hi there! I’m Stacy.<br />Let’s see some personal loan main-wrapper.</p>
+    <div class="features">
+      <div class="inner-feature">
+        <div class="icon-circle">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <p>
+          No Hidden <br />
+          Fees
+        </p>
+      </div>
+      <div class="inner-feature">
+        <div class="icon-circle">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <p>
+          Boost Your <br />
+          Credit Score
+        </p>
+      </div>
+      <div class="inner-feature">
+        <div class="icon-circle">
+          <i class="fa-solid fa-virus-covid"></i>
+        </div>
+        <p>
+          Fast Debt <br />
+          Pay Off
+        </p>
+      </div>
+    </div>
+      <h3>
+        What kind of monthly payments <br />
+        are you looking for?
+      </h3>
+      <div class="selected-btns">
+        <button class="continue-btn" id="loan-amount-1">Below $200</button>
+        <button class="continue-btn" id="loan-amount-2">$200 - $500</button>
+        <button class="continue-btn" id="loan-amount-3">$500 - $1,000</button>
+        <button class="continue-btn" id="loan-amount-4">
+          More than $1,000
+        </button>
+      </div>
+      <div class="reviews">
+        <span class="google">
+          G<span>o</span><span>o</span><span>g</span>le
+        </span>
+        ⭐⭐⭐⭐⭐ 4.8 (2,473 reviews)
+      </div>
+    </div>
+    <!-- Step 3 (hidden initially) -->
+    <div class="step-container" id="step-3" style="display: none">
+      <div class="close-icon" id="close-loan">&times;</div>
+      <h2>Step 3/3</h2>
+      <div class="profile">
+        <img src="assets/images/profile_1.png" alt="" />
+      </div>
+      <p>Hi there! I’m Stacy.<br />Let’s see some personal loan main-wrapper.</p>
+      <div class="features">
+        <div class="inner-feature">
+          <div class="icon-circle">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <p>
+            No Hidden <br />
+            Fees
+          </p>
+        </div>
+        <div class="inner-feature">
+          <div class="icon-circle">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <p>
+            Boost Your <br />
+            Credit Score
+          </p>
+        </div>
+        <div class="inner-feature">
+          <div class="icon-circle">
+            <i class="fa-solid fa-virus-covid"></i>
+          </div>
+          <p>
+            Fast Debt <br />
+            Pay Off
+          </p>
+        </div>
+      </div>
+      <h3>Contact Details</h3>
+      <p>Why do we need this?</p>
+
+      <form action="#" class="field-form" id="contactForm">
+        <div class="field-container">
+          <!-- Name Section -->
+          <div class="first-field">
+            <div class="half-width-input">
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First Name"
+              />
+              <div class="error-message" id="firstNameError">
+                First Name is required
+              </div>
+            </div>
+            <div class="half-width-input">
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last Name"
+              />
+              <div class="error-message" id="lastNameError">
+                Last Name is required
+              </div>
+            </div>  
+          </div>
+
+          <!-- Email Section -->
+          <div class="full-width-input">
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <div class="error-message" id="emailError">Email is required</div>
+          </div>
+
+          <!-- Phone Section (Initially Hidden) -->
+          <div class="full-width-input" id="phoneField" style="display: none">
+            <input type="text" id="phone" name="phone" placeholder="Phone" />
+            <div class="error-message" id="phoneError">Phone is required</div>
+          </div>
+
+          <!-- Address Section (Initially Hidden) -->
+          <div class="full-width-input" id="addressField" style="display: none">
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Address"
+            />
+            <div class="error-message" id="addressError"> Address is required</div>             
+              Address is required
+            </div>
+          </div>
+          <button class="continue-btn" id="continue-btn" type="submit">
+            Continue
+          </button>
+        </form>
+  
+        <div class="reviews">
+          <span class="google">
+            G<span>o</span><span>o</span><span>g</span>le
+          </span>
+          ⭐⭐⭐⭐⭐ 4.8 (2,473 reviews)
+        </div>
+        </div>
+       </form>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

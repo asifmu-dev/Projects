@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .formmodel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(255, 0, 242);
+            color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 5%;
+        }
+
+        .formHeading {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .formPara {
+            font-weight: normal;
+            padding-top: 40px;
+        }
+
+        .closemodel {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: white;
+            color: black;
+            font-size: 30px;
+            border-radius: 50%;
+            text-align: center;
+            top: -60%;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="formmodel">
+            <h1 class="formHeading">Thank You for Your Submission!</h1>
+            <p class="formPara">Your information has been submitted successfully.</p>
+            <p class="closemodel">X</p>
+        </div>
+    </div>
+</body>
+
+</html>

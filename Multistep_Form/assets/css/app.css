@@ -1,0 +1,463 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.w-50 {
+    width: 37.5% !important;
+    height: 91px !important;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container h2 {
+    color: #144373;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.debt-option {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #144373;
+    width: 22.5%;
+    height: 115px;
+    padding: 0px 25px 14px 8px;
+    border: 2px solid #eee8e8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.debt-option input[type="checkbox"] {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid gray;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.debt-option input[type="checkbox"]:checked {
+    background-color: #e55656;
+    border-color: #e55656;
+}
+
+.debt-option input[type="checkbox"]:checked::before {
+    content: '\f00c';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 1px;
+}
+
+.debt-option .icon {
+    font-size: 25px;
+    color: #3b5998;
+    transition: color 0.3s;
+}
+
+.debt-option i {
+    font-size: 1.5rem;
+    color: #3b5998;
+    margin-top: 15px;
+}
+
+.debt-option label {
+    font-size: 1rem;
+    font-weight: bold;
+    /* margin-top: 10px; */
+    cursor: pointer;
+}
+
+.debt-option.selected {
+    border-color: #ff6b6b;
+    background-color: #ffe5e5;
+}
+
+.debt-option.selected i {
+    color: #ff6b6b;
+}
+
+.debt-option:hover {
+    border-color: #ff6b6b;
+    background-color: #ff6b6b26;
+}
+
+.checkbox-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    top: 6px;
+    left: 8px;
+}
+
+.error {
+    color: #CD3935;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.continue-btn {
+    width: 100%;
+    max-width: 496px;
+    height: 56px;
+    background: #CD3935;
+    color: white;
+    border: 2px solid #CD3935;
+    border-radius: 100px;
+    gap: 8px;
+    padding: 16px 24px;
+    margin-top: 1px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue-btn:hover {
+    background-color: #e55656;
+}
+
+.reviews {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.google {
+    color: #4285F4;
+}
+
+.google span:nth-child(2) {
+    color: #EA4335;
+}
+
+.google span:nth-child(3) {
+    color: #FBBC05;
+}
+
+.google span:nth-child(4) {
+    color: #34A853;
+}
+
+/* Step 1 */
+.step-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    /* background-color: #fff; */
+    /* Added background color */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 20px;
+    /* Adjusted padding for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+}
+
+.selected-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center buttons horizontally */
+    gap: 10px;
+    /* Added gap between buttons */
+}
+
+.selected-btns .continue-btn {
+    width: calc(50% - 5px);
+    /* Adjust button width for better alignment */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.close-icon {
+    position: absolute;
+    left: 63%;
+    width: 50px;
+    /* Ensure circle shape */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    /* Adjust font size for the icon */
+    color: #144373;
+    /* Default color */
+    /* background-color: #fff; */
+    /* Circle background */
+    /* border: 2px solid #CD3935; */
+    /* Circle border matching the theme */
+    border-radius: 50%;
+    /* Makes the shape circular */
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.close-icon:hover {
+    color: #fff;
+    /* Change icon color on hover */
+    background-color: #e55656;
+    /* Highlight background on hover */
+    border-color: #e55656;
+    /* Match border with hover background */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+.step-container h2 {
+    color: #144373;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.step-container p {
+    color: #1F4C79;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #BC6A71;
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.features p {
+    color: black;
+    font-weight: 600;
+}
+
+.features .inner-feature .icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #144373;
+    box-shadow: 0 6px 16px rgba(141, 139, 139, 0.2);
+
+}
+
+.step-container h3 {
+    color: #144373;
+    font-weight: bold;
+}
+
+.field-form {
+    width: 100%;
+    margin-right: 30px;
+}
+
+.field-container .half-width-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.first-field {
+    display: flex;
+    gap: 30px;
+}
+
+.field-container .full-width-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    /* Full width for email, phone, and address */
+}
+
+/* Red border on error */
+input.error {
+    border-color: red;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Hide phone and address by default */
+#phoneField,
+#addressField {
+    display: none;
+}
+
+/* meadi */
+
+
+/* Responsive Design */
+@media screen and (max-width: 1440px) {
+
+    .form-container,
+    .step-container {
+        width: 70%;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .form-container,
+    .step-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .main-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .debt-option {
+        width: 100%;
+        /* margin: 5px; */
+    }
+
+    .selected-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .selected-btns button {
+        width: 48%;
+    }
+
+    .step-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .form-container,
+    .step-container {
+        width: 100%;
+        padding: 10px 0px 0px 10px;
+    }
+
+    .debt-option {
+        width: 100% !important;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .selected-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .selected-btns .continue-btn {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .reviews {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .step-navigation {
+        text-align: center;
+    }
+}
